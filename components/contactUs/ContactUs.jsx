@@ -106,10 +106,10 @@ useEffect(() => {
     </div>;
     }
     if (formStatus === 'emailUsed') {
-      return <div className='text-2xl text-red-700 text-center'>تم استخدام هذا البريد الإلكتروني في السابق</div>;
+      return <div className='text-2xl text-red-700 text-center'> השתמשת במייל הזה בעבר</div>;
     }
     if (formStatus === 'error') {
-      return <div className='text-2xl text-red-700 text-center'>حدث خطأ في ارسال البيانات. حاول مرة اخرى</div>;
+      return <div className='text-2xl text-red-700 text-center'>  הבקשה נכשלה, תנסה עוד פעם!</div>;
     }
     return null;
   };
@@ -119,8 +119,6 @@ useEffect(() => {
       setTimeout(()=>{
         setFormStatus(null);
         setFormData({
-          budget: '',
-          ready: '',
           name: '',
           phone: '',
           email: '',
@@ -240,7 +238,7 @@ useEffect(() => {
             <div className="w-full max-w-screen-lg text-left">
               <button type="submit" 
             className="w-full mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#dbb454,45%,white,55%,#dbb454)] bg-[length:200%_100%] px-6 font-medium text-[#303030] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" disabled={isLoading}>
-{isLoading ? 'جاري الإرسال...' : 'أرسل'}
+{isLoading ? ' שולח...' : 'שלח'}
               </button>
             </div>
           )}

@@ -47,9 +47,9 @@ export const HeroParallax = ({ products }) => {
     <div className="max-w-7xl mx-auto py-20 md:py-40 px-4 w-full absolute left-0 right-0 top-1/2 transform -translate-y-1/2 z-10">
       <FlipWordsDemo />
       <div className="w-full flex justify-center items-center">
-        <button className="inline-flex mt-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 bg-[linear-gradient(110deg,#000103,45%,#fff,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+     <Link href='/calendly'>  <button className="inline-flex mt-2 h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 bg-[linear-gradient(110deg,#000103,45%,#fff,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           קביעת פגישה
-        </button>
+        </button></Link> 
       </div>
     </div>
   

@@ -8,8 +8,6 @@ import { SparklesCore } from '../ui/sparkles';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
-    budget: '',
-    ready: '',
     name: '',
     phone: '',
     email: '',
@@ -84,6 +82,7 @@ useEffect(() => {
       } else {
         const newUser = await response.json();
         setFormStatus('submitted');
+        console.log(newUser);
       }
     } catch (error) {
       console.error('Error submitting form data:', error);
@@ -95,14 +94,11 @@ useEffect(() => {
 
   const renderMessage = () => {
     if (formStatus === 'submitted') {
-      return  <div onClick={()=> setFormStatus(null)} className='z-50 w-full h-full bg-black bg-opacity-50 fixed top-0 right-0 flex items-center justify-center'>
-      <Image
-        src='/Popup.jpg'
-        alt="logo"
-        width={1000}
-        height={1000}
-        className='w-full h-auto max-w-screen-sm md:max-w-full md:w-auto md:h-auto'
-      />
+      return  <div onClick={()=> setFormStatus(null)} className='z-50 w-full h-full p-8 bg-black bg-opacity-50 fixed top-0 right-0 flex items-center justify-center'>
+             <video controls className="w-full h-full" autoPlay={true} loop muted>
+        <source src={'/success.mp4'} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>;
     }
     if (formStatus === 'emailUsed') {
@@ -222,7 +218,7 @@ useEffect(() => {
             <div className="mb-3 text-right">
               <label htmlFor="how" className='text-black'>איך שמעת עלינו?<span className="required text-danger">*</span></label>
               <select name="how" id="how" required value={formData.how} onChange={handleChange} className="form-control mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 text-black p-2 bg-gray-200">
-                {/* <option value="">תבחר</option> */}
+                <option value="">תבחר</option>
                 <option value="Instagram">אינסטגרם</option>
                 <option value="Tik Tok">טיקטוק</option>
                 <option value="Facebook">פייסבוק</option>
@@ -233,11 +229,11 @@ useEffect(() => {
 
           {/* Render the submission status message */}
           {renderMessage()}
-       
+        
           {formStatus !== 'submitted' && (
             <div className="w-full max-w-screen-lg text-left">
               <button type="submit" 
-            className="w-full mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#dbb454,45%,white,55%,#dbb454)] bg-[length:200%_100%] px-6 font-medium text-[#303030] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" disabled={isLoading}>
+            className="w-full mt-4 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#fff,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" disabled={isLoading}>
 {isLoading ? ' שולח...' : 'שלח'}
               </button>
             </div>

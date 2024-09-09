@@ -418,8 +418,8 @@ export function GlobeDemo() {
             className="text-center text-xl md:text-4xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-300 bg-opacity-50"> מחברים אתכם לעולם חדש          </h2>
           <p
             className="text-center text-base md:text-lg font-normal text-neutral-400  max-w-md mt-2 mx-auto">
-            פותחת דלתות לחדשנות עם בינה מלאכותית מתקדמת. התחברו לעתיד והזדמנויות עולמיות!
-          </p>
+פיתוח אתרים ויצירות דיגיטליות בעזרת בינה מלאכותית <br/> יצירת תוכן, תמונות וסרטונים מותאמים אישית לעסק שלך.
+</p>
           
        
         <div className="w-full flex justify-center items-center">

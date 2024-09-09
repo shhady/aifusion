@@ -32,7 +32,7 @@ export const products = [
       "/funan.png",
   },
   {
-    title: "Editrix AI",
+    title: "Editrix",
     link: "https://editrix.ai",
     thumbnail:
       "/arabrew.png",
